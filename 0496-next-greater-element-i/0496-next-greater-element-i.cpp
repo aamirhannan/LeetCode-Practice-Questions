@@ -3,6 +3,8 @@ class Solution
     public:
         vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
         {
+            
+            //Time complexity ----> O(n^2),  Space Complexity   ----> O(1) - Constant Space
             int n = nums1.size();
             int m = nums2.size();
             vector<int> output;
