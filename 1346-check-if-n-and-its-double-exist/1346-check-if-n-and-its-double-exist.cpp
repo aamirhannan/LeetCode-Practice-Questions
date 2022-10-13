@@ -22,7 +22,7 @@ class Solution
             */
             
             
-            //this soln has O(n) T.C and O(n) S.C
+            /*//this soln has O(n) T.C and O(n) S.C
             unordered_map<double, int> mp;
             for (int i = 0; i < arr.size(); i++)
             {
@@ -33,5 +33,22 @@ class Solution
                 mp[arr[i]]++;
             }
             return false;
+            */
+            
+            
+            // ---> this soln will have T.C ----> nlogn and S.C ---> O(1).
+            //using inbuilt binary_search() function.
+            
+            sort(arr.begin(),arr.end());
+            for(int i = 0; i < arr.size(); i++)
+            {
+                if(binary_search(arr.begin()+i+1,arr.end(),2*arr[i]) or (binary_search(arr.begin()+i+1,arr.end(),arr[i]/2.0)) )
+                {
+                    return true;
+                }
+            }
+            return false;
+            
+            
         }
 };
