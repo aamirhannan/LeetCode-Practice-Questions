@@ -3,7 +3,9 @@ class Solution
     public:
         bool checkIfExist(vector<int> &arr)
         {
-            // this soln has T.C----> O(n^2) and S.c----> O(1)
+            
+            // Approach -1 ===> this soln has T.C----> O(n^2) and S.c----> O(1)
+            
             /*for(int i = 0; i < arr.size(); i++)
             {
                 for(int j = 0; j < arr.size(); j++)
@@ -22,7 +24,8 @@ class Solution
             */
             
             
-            /*//this soln has O(n) T.C and O(n) S.C
+            /*// Approach - 2 ====>   this soln has O(n) T.C and O(n) S.C
+            
             unordered_map<double, int> mp;
             for (int i = 0; i < arr.size(); i++)
             {
@@ -36,7 +39,7 @@ class Solution
             */
             
             
-            // ---> this soln will have T.C ----> nlogn and S.C ---> O(1).
+            // Approach-3 ====> this soln will have T.C ----> nlogn and S.C ---> O(1).
             //using inbuilt binary_search() function.
             
             sort(arr.begin(),arr.end());
