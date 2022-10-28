@@ -15,10 +15,10 @@ public:
             return;
         }
         
-        sum += arr[idx];
-        subsetSum(idx+1,n,ans,arr,sum);
+        // sum += arr[idx];
+        subsetSum(idx+1,n,ans,arr,sum+arr[idx]);
         
-        sum -= arr[idx];
+        // sum -= arr[idx];
         subsetSum(idx+1,n,ans,arr,sum);
     }
     vector<int> subsetSums(vector<int> arr, int N)
