@@ -15,16 +15,12 @@ public:
             return;
         }
         
-        // sum += arr[idx];
+      
         subsetSum(idx+1,n,ans,arr,sum+arr[idx]);
-        
-        // sum -= arr[idx];
         subsetSum(idx+1,n,ans,arr,sum);
     }
     vector<int> subsetSums(vector<int> arr, int N)
     {
-        // Write Your Code here
-        // vector<int> v;
         vector<int> ans;
         int n = N;
         int idx = 0;
