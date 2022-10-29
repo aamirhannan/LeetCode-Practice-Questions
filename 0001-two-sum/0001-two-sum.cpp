@@ -20,7 +20,7 @@ public:
             {
                 ans.push_back(temp[l].second);
                 ans.push_back(temp[r].second);
-                return ans;
+                break;
             }
             else if(temp[l].first + temp[r].first < target)
             {
