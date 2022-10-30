@@ -1,6 +1,9 @@
 class Solution
 {
     public:
+
+       	// Approach - 1  T.C --> O(N),  S.C ---> O(1);
+
         void nextPermutation(vector<int> &v)
         {
 
@@ -8,7 +11,7 @@ class Solution
             int n = v.size() - 1;
             int prev = 0;
             int idx = 0;
-            for (int i = n; i > 0; i--)
+            for (int i = n; i > 0; i--)	//As we are goint till i-1 in the if case, so it is necessary to run i > 0 not                                          equal otherwise it will give runtime error.
             {
                 if (v[i - 1] < v[i])
                 {
@@ -17,10 +20,10 @@ class Solution
                     break;
                 }
             }
-            
-            //Exception Handling
-            
-            if(idx == 0)
+
+           	//Exception Handling
+
+            if (idx == 0)
             {
                 sort(v.begin(), v.end());
                 return;
